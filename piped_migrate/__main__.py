@@ -1,0 +1,19 @@
+from piped_migrate import get_playlists, save_playlists, get_token
+
+
+def main():
+    jtype = input("Import or Export?: ")
+    if jtype.lower().startswith("e"):
+        instance = input("API url of instance: ").strip("/")
+        token = get_token(instance, input("Username: "), input("Password: "))
+        get_playlists(instance, token)
+        print("Done!")
+    else:
+        instance = input("API url of instance: ").strip("/")
+        token = get_token(instance, input("Username: "), input("Password: "))
+        save_playlists(instance, token)
+        print("Imoort done!")
+
+
+if __name__ == "__main__":
+    main()
