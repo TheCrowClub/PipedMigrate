@@ -16,16 +16,6 @@ Install PipedMigrate with pip
     
 ## Usage/Examples
 
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
-
-
-## Example
 Run this after installation.
 ```bash
   pipedmigrate
