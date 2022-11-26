@@ -6,7 +6,7 @@ from requests import Session, get, post
 def get_token(instance, username, password):
     return post(
         f"{instance}/login", json={"username": username, "password": password}
-    ).text
+    ).json()
 
 
 def get_playlists(instance, token, file="export.json"):
